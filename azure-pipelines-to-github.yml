@@ -19,8 +19,8 @@ stages:
 
             git config --global user.email "getme@devopscoder.io"
             git config --global user.name "DevOps Coder"
-            git config --global --add url."git@github.com/thedevopscoder/thedevopscoder" #.insteadOf "https://github.com/"
-            # git remote add github https://github.com/thedevopscoder/thedevopscoder  # Replace with your GitHub repository URL
+            #git config --global --add url."git@github.com/thedevopscoder/thedevopscoder" #.insteadOf "https://github.com/"
+            git remote add github https://github.com/thedevopscoder/thedevopscoder.git  # Replace with your GitHub repository URL
             git push github HEAD:main  # Change the branch name as needed
           env:
             GH_TOKEN: $(thedevopscoder)  # GitHub Personal Access Token secret from Azure DevOps
