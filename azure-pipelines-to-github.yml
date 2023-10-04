@@ -18,7 +18,8 @@ stages:
         - script: |
  
             git remote set-url origin https://$GITHUB_USERNAME:$GITHUB_TOKEN@github.com/thedevopscoder/thedevopscoder.git
-            git push origin main 
+            git branch
+          # git push origin main 
           # git push github --force
 
           # git config --global user.name "DevOps Coder"
