@@ -20,7 +20,7 @@ stages:
             git config --local user.name "Your Name"
             git remote add github https://github.com/thedevopscoder/thedevopscoder.git
             git push origin main --force
-            git remote set-url --add --push origin 
+            git remote set-url --add --push origin https://github.com/thedevopscoder/thedevopscoder.git
             git remote -v 
           # git remote set-url --push origin user@example.com:repo.git
           # git config --global user.email "getme@devopscoder.io"
