@@ -16,7 +16,7 @@ stages:
           clean: true
 
         - script: |
-            git config --global user.name "DevOps Coder"
+            git config --global user.name "thedevopscoder"
             git config --global user.email "getme@devopscoder.io"
             git remote add github https://github.com/thedevopscoder/thedevopscoder.git
             git fetch origin
