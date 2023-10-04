@@ -18,8 +18,9 @@ stages:
         - script: |
             git remote add origin https://github.com/thedevopscoder/thedevopscoder.git
             git remote -v
+            git remote set-url origin https://github.com/thedevopscoder/thedevopscoder.git
 
-            # git config --global user.email "getme@devopscoder.io"
+         #   # git config --global user.email "getme@devopscoder.io"
             # git config --global user.name "DevOps Coder"
             # # git config --global --add url."thedevopscoder@github.com/thedevopscoder/thedevopscoder" #.insteadOf "https://github.com/"
             # git remote add github git@github.com:thedevopscoder/thedevopscoder.git  # Replace with your GitHub repository URL
