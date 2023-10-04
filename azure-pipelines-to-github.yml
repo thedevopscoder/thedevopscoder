@@ -16,16 +16,19 @@ stages:
           clean: true
 
         - script: |
-            git config --local user.email "you@example.com"
-            git config --local user.name "Your Name"
-            git remote add github https://github.com/thedevopscoder/thedevopscoder.git
-            git push origin main --force
-            git remote set-url --add --push origin https://github.com/thedevopscoder/thedevopscoder.git
-            git remote -v 
-          # git remote set-url --push origin user@example.com:repo.git
-          # git config --global user.email "getme@devopscoder.io"
+            git config --global user.email "getme@devopscoder.io"
+            git config --global user.name "devopscoder"
+            git checkout -b testing
+            git add .
+            git commit -m "test comment" 
+            git push --set-upstream https://github.com/thedevopscoder/thedevopscoder.git
+          # git remote set-url origin https://$GITHUB_USERNAME:$GITHUB_TOKEN@github.com/thedevopscoder/thedevopscoder.git
+          # git branch
+          # git push origin main 
+          # git push github --force
+
           # git config --global user.name "DevOps Coder"
-          # git remote add origin https://github.com/thedevopscoder/thedevopscoder.git
+          # git remote add origin 
           # git remote -v
           # git remote set-url origin https://github.com/thedevopscoder/thedevopscoder.git
           # git push githubprofile HEAD:main
@@ -35,4 +38,7 @@ stages:
             # git remote add github git@github.com:thedevopscoder/thedevopscoder.git  # Replace with your GitHub repository URL
             # git push github HEAD:main  # Change the branch name as needed
           env:
-            GH_TOKEN: $(thedevopscoder)  # GitHub Personal Access Token secret from Azure DevOps
+            GITHUB_USERNAME: 'thedevopscoder'
+            GITHUB_TOKEN: $(thedevopscoder)  # GitHub Personal Access Token secret from Azure DevOps
+
+
