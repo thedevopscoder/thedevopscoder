@@ -16,12 +16,13 @@ stages:
           clean: true
 
         - script: |
+            git config --global user.name "DevOps Coder"
+            git config --global user.email "getme@devopscoder.io"
             git remote add github https://github.com/thedevopscoder/thedevopscoder.git
             git fetch origin
             git push github HEAD:main --force
           # git push github --force
-          # git remote set-url --push origin user@example.com:repo.git
-          # git config --global user.email "getme@devopscoder.io"
+
           # git config --global user.name "DevOps Coder"
           # git remote add origin https://github.com/thedevopscoder/thedevopscoder.git
           # git remote -v
