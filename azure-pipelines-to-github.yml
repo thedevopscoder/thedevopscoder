@@ -16,9 +16,14 @@ stages:
           clean: true
 
         - script: |
- 
-            git remote set-url origin https://$GITHUB_USERNAME:$GITHUB_TOKEN@github.com/thedevopscoder/thedevopscoder.git
-            git branch
+            git config --global user.email "getme@devopscoder.io"
+            git config --global user.name "devopscoder"
+            git checkout -b testing
+            git add .
+            git commit -m "test comment" 
+            git push --set-upstream https://$GITHUB_USERNAME:$GITHUB_TOKEN@github.com/thedevopscoder/thedevopscoder.git
+          # git remote set-url origin https://$GITHUB_USERNAME:$GITHUB_TOKEN@github.com/thedevopscoder/thedevopscoder.git
+          # git branch
           # git push origin main 
           # git push github --force
 
