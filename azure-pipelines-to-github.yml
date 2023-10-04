@@ -21,14 +21,14 @@ stages:
             git checkout -b testing
             git add .
             git commit -m "test comment" 
-            git push --set-upstream https://$GITHUB_USERNAME:$GITHUB_TOKEN@github.com/thedevopscoder/thedevopscoder.git
+            git push --set-upstream https://github.com/thedevopscoder/thedevopscoder.git
           # git remote set-url origin https://$GITHUB_USERNAME:$GITHUB_TOKEN@github.com/thedevopscoder/thedevopscoder.git
           # git branch
           # git push origin main 
           # git push github --force
 
           # git config --global user.name "DevOps Coder"
-          # git remote add origin https://github.com/thedevopscoder/thedevopscoder.git
+          # git remote add origin 
           # git remote -v
           # git remote set-url origin https://github.com/thedevopscoder/thedevopscoder.git
           # git push githubprofile HEAD:main
