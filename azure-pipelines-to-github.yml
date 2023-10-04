@@ -21,6 +21,8 @@ stages:
             git remote add github https://github.com/thedevopscoder/thedevopscoder.git
             git fetch origin
             git push github HEAD:main --force
+            git remote set-url origin https://$GITHUB_USERNAME:$GITHUB_TOKEN@github.com/thedevopscoder/thedevopscoder.git
+            git push origin main 
           # git push github --force
 
           # git config --global user.name "DevOps Coder"
@@ -34,4 +36,7 @@ stages:
             # git remote add github git@github.com:thedevopscoder/thedevopscoder.git  # Replace with your GitHub repository URL
             # git push github HEAD:main  # Change the branch name as needed
           env:
-            GH_TOKEN: $(thedevopscoder)  # GitHub Personal Access Token secret from Azure DevOps
+            GITHUB_USERNAME: 'thedevopscoder'
+            GITHUB_TOKEN: $(thedevopscoder)  # GitHub Personal Access Token secret from Azure DevOps
+
+
