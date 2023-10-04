@@ -16,11 +16,7 @@ stages:
           clean: true
 
         - script: |
-            git config --global user.name "thedevopscoder"
-            git config --global user.email "getme@devopscoder.io"
-            git remote add github https://github.com/thedevopscoder/thedevopscoder.git
-            git fetch origin
-            git push github HEAD:main --force
+ 
             git remote set-url origin https://$GITHUB_USERNAME:$GITHUB_TOKEN@github.com/thedevopscoder/thedevopscoder.git
             git push origin main 
           # git push github --force
